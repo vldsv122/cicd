@@ -21,5 +21,12 @@ def filter_lines_by_keywoard(lines=None, keyword=None):
         return [line for line in lines if keyword in line]
     return None
 
+def save_to_file(filename=None, lines=None):
+    if filename and lines:
+        with open(get_file_path(filename), "w") as f:
+            for line in lines:
+                f.write(line + "\n")
+        return True
+    return None
 
 
