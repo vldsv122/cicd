@@ -16,4 +16,10 @@ def get_file_content(filename=None):
             return f.read()
     return None
 
+def get_file_lines(content=None):
+    if content:
+        return content.splitlines()
+    return None
+
+
 
