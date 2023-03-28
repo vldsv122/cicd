@@ -1,9 +1,4 @@
 import os
-import argparse
-
-
-argparse = argparse.ArgumentParser()
-argparse.add_argument("-f", "--filter", )
 
 def get_file_path(filename=None):
     if filename:
@@ -19,6 +14,11 @@ def get_file_content(filename=None):
 def get_file_lines(content=None):
     if content:
         return content.splitlines()
+    return None
+
+def filter_lines_by_keywoard(lines=None, keyword=None):
+    if lines and keyword:
+        return [line for line in lines if keyword in line]
     return None
 
 
