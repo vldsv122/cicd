@@ -29,4 +29,11 @@ def save_to_file(filename=None, lines=None):
         return True
     return None
 
+if __name__ == "__main__":
+    keywoard = "sova"
+    content = get_file_content("text.txt")
+    lines = get_file_lines(content)
+    filtered = filter_lines_by_keywoard(lines, keywoard)
+    save_to_file("filtered.txt", filtered)
+
 
